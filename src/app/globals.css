@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Make the page full height */
+html,
+body,
+#root {
+  min-height: 100%;
+}

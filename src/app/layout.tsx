@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { ReactNode } from "react";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { NextFont } from "next/dist/compiled/@next/font";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "react-datepicker/dist/react-datepicker.css";
+
+config.autoAddCss = false;
+
+const inter: NextFont = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
