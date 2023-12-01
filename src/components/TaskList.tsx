@@ -55,7 +55,9 @@ export default function TaskList(): ReactElement {
         {/* Incomplete tasks list */}
         <ul className="space-y-0.5">
           {/* Incomplete task items */}
-          {incompleteTasks?.map((task) => <TaskListItem task={task} />)}
+          {incompleteTasks?.map((task) => (
+            <TaskListItem key={task.id} task={task} />
+          ))}
         </ul>
 
         {/* Completed tasks accordion */}
@@ -85,7 +87,7 @@ export default function TaskList(): ReactElement {
             {completedTasksOpen && (
               <ul className="space-y-0.5">
                 {completedTasks.map((task) => (
-                  <TaskListItem task={task} />
+                  <TaskListItem key={task.id} task={task} />
                 ))}
               </ul>
             )}
